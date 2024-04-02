@@ -46,7 +46,7 @@ section#introduction {
 
 section .introduction {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -124,17 +124,18 @@ section .contact-list > li img:hover {
 
   section .introduction {
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-evenly;
     gap: 20px;
   }
 
-  section .introduction.img-container {
+  section .introduction .img-container img {
     flex-grow: 2;
   }
 
-  section .introduction p {
-    flex-basis: 45%;
+  section .introduction .hero-text p {
+    flex-basis: 40%;
   }
 
   section .skills {
