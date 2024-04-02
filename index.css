@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --primary-color: #31363f;
+  --secondary-color: #76abae;
+  --light-color: #eee;
+  --dark-color: #222831;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Roboto-Mono", open-sans;
+}
+
+header {
+  width: 100vw;
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+}
+
+header .header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+}
+
+.section__layout {
+  width: 75%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+section#introduction {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+section .introduction {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+section .introduction .img-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+p {
+  line-height: 1.25rem;
+  letter-spacing: 0.1em;
+}
+
+section#skills {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+section .skills {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: self-start;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 12px;
+}
+
+section .skills > li {
+  width: 12rem;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--secondary-color);
+  color: var(--dark-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  flex-basis: 40%;
+}
+
+section#contact {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+section .contact-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+section .contact-list > li a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+section .contact-list > li a p {
+  margin-top: 10px;
+}
+
+section .contact-list > li img:hover {
+  transform: scale(1.25);
+  transition: all 0.3s ease right;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .section__layout {
+    width: 65%;
+  }
+
+  section .introduction {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+  section .introduction.img-container {
+    flex-grow: 2;
+  }
+
+  section .introduction p {
+    flex-basis: 45%;
+  }
+
+  section .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  section .skills > li {
+    width: fit-content;
+  }
+}
